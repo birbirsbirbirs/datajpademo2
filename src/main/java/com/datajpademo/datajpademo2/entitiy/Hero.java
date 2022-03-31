@@ -55,7 +55,9 @@ import java.util.Objects;
 })
 public class Hero extends BaseEntity {
     private String name;
+    @Embedded
     private Address shippingAddress;
+    @Embedded
     private Address billToAddress;
 
     @Override
