@@ -59,6 +59,8 @@ public class Hero extends BaseEntity {
     private Address shippingAddress;
     @Embedded
     private Address billToAddress;
+    @Enumerated(EnumType.STRING)
+    private OrderStatus orderStatus;
 
     @Override
     public boolean equals(Object o) {
@@ -66,11 +68,11 @@ public class Hero extends BaseEntity {
         if (!(o instanceof Hero)) return false;
         if (!super.equals(o)) return false;
         Hero hero = (Hero) o;
-        return Objects.equals(getName(), hero.getName()) && Objects.equals(getShippingAddress(), hero.getShippingAddress()) && Objects.equals(getBillToAddress(), hero.getBillToAddress());
+        return Objects.equals(getName(), hero.getName()) && Objects.equals(getShippingAddress(), hero.getShippingAddress()) && Objects.equals(getBillToAddress(), hero.getBillToAddress()) && getOrderStatus() == hero.getOrderStatus();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getName(), getShippingAddress(), getBillToAddress());
+        return Objects.hash(super.hashCode(), getName(), getShippingAddress(), getBillToAddress(), getOrderStatus());
     }
 }
