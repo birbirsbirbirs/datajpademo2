@@ -1,7 +1,6 @@
 package com.datajpademo.datajpademo2.entitiy;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Embeddable;
 import java.util.Objects;
@@ -10,6 +9,9 @@ import java.util.Objects;
  * @author bir birs sgrg007@gmail.com
  * @since 3/30/2022
  */
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @Embeddable
