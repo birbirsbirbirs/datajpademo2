@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.datajpademo'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '17'
 
 configurations {
     compileOnly {
@@ -19,7 +19,13 @@ repositories {
 }
 
 ext {
-    set('springCloudVersion', "2021.0.5")
+    set('springCloudVersion', "2021.0.6")
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.junit:junit-bom:5.9.2'
+    }
 }
 
 dependencies {
