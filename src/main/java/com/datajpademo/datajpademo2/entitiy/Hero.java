@@ -9,6 +9,7 @@ import java.util.Objects;
  * @author bir birs sgrg007@gmail.com
  * @since 3/30/2022
  */
+@ToString
 @Entity
 @Setter
 @Getter

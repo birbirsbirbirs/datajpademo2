@@ -2,11 +2,11 @@ package com.datajpademo.datajpademo2.service;
 
 import com.datajpademo.datajpademo2.entitiy.Hero;
 import com.datajpademo.datajpademo2.repository.HeroRepository;
-import lombok.extern.slf4j.Slf4j;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 /**
@@ -14,9 +14,10 @@ import java.util.UUID;
  * @since 3/30/2022
  */
 
-@Slf4j
+
 @Service
 public class HeroService {
+    private final Logger log= LogManager.getLogger(getClass());
     private final HeroRepository heroRepository;
 
     public HeroService(HeroRepository heroRepository) {
@@ -30,7 +31,10 @@ public class HeroService {
     }
 
     public List<Hero> findAll() {
+        long timeBefore=System.currentTimeMillis();
         List<Hero> heroList = heroRepository.findAll();
+        long spentTimeInMillis=System.currentTimeMillis()-timeBefore;
+        log.info("Execution time: {}",spentTimeInMillis);
         heroList.forEach(hero -> log.info("{}", hero));
         return heroList;
     }

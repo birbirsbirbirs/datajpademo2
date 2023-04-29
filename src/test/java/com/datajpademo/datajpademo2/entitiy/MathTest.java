@@ -1,7 +1,6 @@
 package com.datajpademo.datajpademo2.entitiy;
 
 import org.junit.jupiter.api.DynamicTest;
-import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.TestFactory;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -22,7 +21,7 @@ public class MathTest {
         assertEquals(expected,Math.sqrt(input),0.01);
     }
 
-    @RepeatedTest(100)
+//    @RepeatedTest(100)
     void flakyTest(){
         assertEquals(0.0,Math.random(),0.9);
     }

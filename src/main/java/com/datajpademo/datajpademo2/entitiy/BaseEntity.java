@@ -2,10 +2,9 @@ package com.datajpademo.datajpademo2.entitiy;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.CreatedBy;
+import lombok.ToString;
 
 import javax.persistence.*;
-
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -14,6 +13,7 @@ import java.util.UUID;
  * @author bir birs sgrg007@gmail.com
  * @since 3/30/2022
  */
+@ToString
 @MappedSuperclass
 @Setter
 @Getter
