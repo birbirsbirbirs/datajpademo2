@@ -19,9 +19,10 @@ import java.util.UUID;
 @Getter
 public abstract class BaseEntity {
     @Id
-    @GeneratedValue(generator = "UUID")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_post")
+    @SequenceGenerator(name="seq_post",allocationSize = 5,sequenceName = "post")
     @Column
-    private UUID id;
+    private Long id;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created", nullable = false)

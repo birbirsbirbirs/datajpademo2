@@ -27,7 +27,7 @@ public class HeroController {
     }
 
     @GetMapping("/{id}")
-    public Hero findById(UUID id){
+    public Hero findById(@PathVariable Long id){
         return heroService.findHeroById(id);
     }
 

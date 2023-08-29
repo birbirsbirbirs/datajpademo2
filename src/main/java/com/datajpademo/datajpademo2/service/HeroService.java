@@ -39,7 +39,7 @@ public class HeroService {
         return heroList;
     }
 
-    public Hero findHeroById(UUID id) {
+    public Hero findHeroById(Long id) {
         Hero hero = heroRepository.findById(id).orElse(null);
         log.info("returning: {}", hero);
         return hero;

@@ -9,5 +9,5 @@ import java.util.UUID;
  * @author bir birs sgrg007@gmail.com
  * @since 3/30/2022
  */
-public interface HeroRepository extends JpaRepository<Hero, UUID> {
+public interface HeroRepository extends JpaRepository<Hero, Long> {
 }
