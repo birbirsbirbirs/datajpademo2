@@ -1,10 +1,11 @@
 package com.datajpademo.datajpademo2.entitiy;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.*;
+
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;

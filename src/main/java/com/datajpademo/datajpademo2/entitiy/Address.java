@@ -1,8 +1,8 @@
 package com.datajpademo.datajpademo2.entitiy;
 
+import jakarta.persistence.Embeddable;
 import lombok.*;
 
-import javax.persistence.Embeddable;
 import java.util.Objects;
 
 /**
