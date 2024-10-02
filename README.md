@@ -1,4 +1,5 @@
-1. how to write tests and extensions using JUnit 5?
+1. swagger url: http://localhost:8000/swagger-ui/index.html
+2. how to write tests and extensions using JUnit 5?
 2. What is the JUnit Platform and why do we need it?
 3. What's still to come and how to get started?
 4. ![img.png](screenshots/img.png)
